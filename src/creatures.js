@@ -403,12 +403,12 @@ export class CreatureManager {
         group.add(otterBody);
         
         // Head
-        const head = new THREE.Mesh(
+        const otterHead = new THREE.Mesh(
           new THREE.SphereGeometry(length * 0.15),
           otterBody.material
         );
-        head.position.x = length * 0.35;
-        group.add(head);
+        otterHead.position.x = length * 0.35;
+        group.add(otterHead);
         
         // Cute nose
         const nose = new THREE.Mesh(
