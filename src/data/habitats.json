@@ -1,0 +1,76 @@
+{
+  "habitats": [
+    {
+      "id": "coral_reef",
+      "label": "Coral Reef",
+      "fog_color": "#00CED1",
+      "ambient_color": "#40E0D0",
+      "typical_depth_range": "0-20m",
+      "bounds": {
+        "x": [-125, 0],
+        "y": [50, 75],
+        "z": [-125, 0]
+      }
+    },
+    {
+      "id": "kelp_forest",
+      "label": "Kelp Forest",
+      "fog_color": "#2E8B57",
+      "ambient_color": "#3CB371",
+      "typical_depth_range": "5-30m",
+      "bounds": {
+        "x": [0, 125],
+        "y": [30, 75],
+        "z": [-125, 0]
+      }
+    },
+    {
+      "id": "open_ocean",
+      "label": "Open Ocean",
+      "fog_color": "#000080",
+      "ambient_color": "#0000CD",
+      "typical_depth_range": "0-75m",
+      "bounds": {
+        "x": [-125, 125],
+        "y": [-25, 30],
+        "z": [-125, 125]
+      }
+    },
+    {
+      "id": "deep_sea",
+      "label": "Deep Sea",
+      "fog_color": "#000033",
+      "ambient_color": "#191970",
+      "typical_depth_range": "75-150m",
+      "bounds": {
+        "x": [-125, 125],
+        "y": [-75, -25],
+        "z": [-125, 125]
+      }
+    },
+    {
+      "id": "polar",
+      "label": "Polar Waters",
+      "fog_color": "#B0E0E6",
+      "ambient_color": "#AFEEEE",
+      "typical_depth_range": "0-75m",
+      "bounds": {
+        "x": [-125, 125],
+        "y": [-75, 75],
+        "z": [125, 125]
+      }
+    },
+    {
+      "id": "seagrass_mangrove",
+      "label": "Seagrass & Mangrove",
+      "fog_color": "#4682B4",
+      "ambient_color": "#5F9EA0",
+      "typical_depth_range": "0-10m",
+      "bounds": {
+        "x": [0, 125],
+        "y": [50, 75],
+        "z": [0, 125]
+      }
+    }
+  ]
+}

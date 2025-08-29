@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Person Booper</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="hud">
+      <div id="crosshair">+</div>
+      <div id="score">Boops: <span id="boopCounter">0</span></div>
+      <div id="speedIndicator">Speed: <span id="speedValue">0</span> km/h</div>
+      <div id="distanceIndicator">Distance: <span id="distanceValue">--</span></div>
+      <div id="compass"></div>
+      <div id="zoneLabel"></div>
+      <div id="creatureLabel"></div>
+      <canvas id="minimap"></canvas>
+    </div>
+
+    <div id="helpPanel" class="panel hidden">
+      <h2>Controls</h2>
+      <h3>Desktop</h3>
+      <p>WASD - Swim</p>
+      <p>Mouse - Look around</p>
+      <p>Space - Swim up</p>
+      <p>Ctrl - Swim down</p>
+      <p>Click - Boop creature</p>
+      <p>H - Toggle help</p>
+      <p>B - Boopdex</p>
+      <p>Esc - Settings</p>
+      <h3>Mobile</h3>
+      <p>Touch controls - Move</p>
+      <p>Swipe - Look</p>
+      <p>Tap - Boop</p>
+    </div>
+
+    <div id="settingsPanel" class="panel hidden">
+      <h2>Settings</h2>
+      <label>
+        <input type="checkbox" id="webglToggle" checked>
+        Enable WebGL (3D Mode)
+      </label>
+      <label>
+        Volume
+        <input type="range" id="volumeSlider" min="0" max="100" value="50">
+      </label>
+      <button id="closeSettings">Close</button>
+    </div>
+
+    <div id="boopdexPanel" class="panel hidden">
+      <h2>Boopdex</h2>
+      <div id="boopdexList"></div>
+      <button id="closeBoopdex">Close</button>
+    </div>
+
+    <div id="mobileWarning" class="hidden">
+      <p>Try on desktop for full experience</p>
+    </div>
+    
+    <div id="startModal" class="modal">
+      <div class="modal-content">
+        <h1>🐠 First Person Booper 🐙</h1>
+        <p class="subtitle">The Most Sophisticated Marine Harassment Simulator™</p>
+        
+        <div class="modal-section">
+          <h3>Your Mission (Should You Choose to Accept It)</h3>
+          <p>You're trapped in a 250m × 250m × 150m aquatic prison with a bunch of unsuspecting sea creatures. Your only goal? <strong>BOOP THEM ALL.</strong></p>
+          <p>That's right. You're going to gently tap marine life. For points. Because apparently this is what humanity has come to.</p>
+        </div>
+        
+        <div class="modal-section">
+          <h3>Controls (Yes, You Need Instructions for This)</h3>
+          <div class="controls-grid">
+            <div><strong>WASD</strong> - Swim around like a caffeinated dolphin</div>
+            <div><strong>Mouse</strong> - Look around in existential wonder</div>
+            <div><strong>Space</strong> - Ascend to enlightenment (or just up)</div>
+            <div><strong>Ctrl</strong> - Descend into the abyss</div>
+            <div><strong>Click</strong> - BOOP! (The entire point of this game)</div>
+            <div><strong>H</strong> - Help (in case you forget how to boop)</div>
+            <div><strong>B</strong> - Boopdex (your trophy collection)</div>
+            <div><strong>ESC</strong> - Settings (for the one volume slider)</div>
+          </div>
+        </div>
+        
+        <div class="modal-section">
+          <h3>Pro Tips from a Professional Booper</h3>
+          <ul>
+            <li>🎯 Get within 25 meters and roughly aim at a creature. We're not asking for sniper precision here.</li>
+            <li>⚡ Check your speed indicator - you can zoom at 72 km/h because physics is optional underwater.</li>
+            <li>🗺️ Lost? Check the minimap. It's that tiny square that shows you're swimming in circles.</li>
+            <li>🏆 Each creature can only be booped once every 10 seconds. They need recovery time from your affection.</li>
+            <li>✨ Listen for the satisfying *ding* - it's the sound of successful harassment!</li>
+          </ul>
+        </div>
+        
+        <div class="modal-section">
+          <h3>Creatures to Terrorize... Er, Befriend</h3>
+          <p>From majestic blue whales to derpy sea otters, everyone gets booped equally. Democracy!</p>
+        </div>
+        
+        <button id="startButton" class="start-button">
+          Let's Get Booping! 👉🐟
+        </button>
+        
+        <p class="disclaimer">No actual sea creatures were harmed in the making of this game. Can't say the same for their dignity.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
